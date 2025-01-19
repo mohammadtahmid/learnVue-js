@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Part-3 VueJs loop</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <ul>
+            <li v-for = "data in todos">{{ data.text }} -- {{data.title }} -- {{data.type}}</li>
+        </ul>
+    </div>
+        
+
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                todos:[
+                    {text:'js',title:'Language',type:'wd'},
+                    {text:'CSS',title:'Style',type:'wd'},
+                    {text:'Html',title:'Initial Design',type:'wd'},
+                    {text:'Java',title:'Java Development',type:'wd'}
+                ]
+            }
+        })
+      </script>
+
+    
+</body>
+</html>
