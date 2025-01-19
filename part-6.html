@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Part-5 Two way data binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2>{{ message }}</h2>
+        My Name is: {{ name}} <br>
+        <input type="text" v-model="name">
+        <br>
+        <hr>
+
+
+        <input type="checkbox" v-model="status">
+        <p>status is: {{ status }}</p>
+
+        <br>
+        <hr>
+
+        <input type="checkbox" value="Tahmid" v-model="names">Tahmid    
+        <input type="checkbox" value="Kawser" v-model="names">Kawser    
+        <input type="checkbox" value="Mohid" v-model="names">Mohid    
+        <input type="checkbox" value="Rasel" v-model="names">Rasel    
+        <input type="checkbox" value="Emon" v-model="names">Emon    
+        <p>status is: {{ names.join(', ') }}</p>
+
+        <hr>
+
+        <input type="radio" value="Nice" v-model="feeling">Nice
+        <input type="radio" value="Good" v-model="feeling">Good
+        <input type="radio" value="Better" v-model="feeling">Better
+        <p>Feeling is: {{ feeling }}</p>
+
+      </div>
+
+
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello vue!',
+                name:'',
+                status:'',
+                names:[],
+                feeling:null,
+            }
+        })
+      </script>
+
+    
+</body>
+</html>

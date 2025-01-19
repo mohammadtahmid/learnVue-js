@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Part-7 Event</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2>{{ message }}</h2>
+        <button v-on:click="count +=1">+</button>
+        <small>You clicked {{ count }} times</small>
+
+        <hr>
+
+        <button v-on:click="total(1)">+</button>
+        <button v-on:click="total(-1)">-</button>
+        <small>You clicked {{totalValue}} times</small>
+
+        <hr>
+        <button @click="good">Good</button>
+
+        <hr>
+        <button @click="say('hi')">Hii</button>
+        <button @click="say('hello')">Hello</button>
+
+
+      </div>
+
+
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello vue!',
+                count:0,
+                totalValue:0
+            },
+
+            methods: {
+                total(val){
+                    this.totalValue += val;
+                },
+                good(event){
+                    alert('hey '+this.message)
+
+                    if(event){
+                        console.log(event.target.tagName)
+                    }
+                },
+                say(msg){
+                    alert(msg)
+                }
+            }
+        })
+      </script>
+
+    
+</body>
+</html>
