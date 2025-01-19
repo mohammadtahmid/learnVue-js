@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,3 +33,39 @@
     
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Part-2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2 v-if="seen">{{ message }}</h2>
+        <h2 v-else-if="seen2">{{second}}</h2>
+        <h2 v-else="seen3">{{Three}}</h2>
+      </div>
+        
+
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                seen:false,
+                seen2:false,
+                seen3:true,
+                message: 'Hello vue!',
+                second: "This is seen two",
+                Three: "This is third",
+            }
+        })
+      </script>
+
+    
+</body>
+</html>
+>>>>>>> e2d86906f1f26053d163b3def289662dae11bcb7
